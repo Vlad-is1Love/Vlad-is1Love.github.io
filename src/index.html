@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Андрей Браун Веб-разработчик</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -12,73 +14,83 @@
             <div class="logo">Андрей Браун</div>
             <div class="menu">
                 <ul>
-                    <li>ОБО МНЕ</li>
-                    <li>УСЛУГИ</li>
-                    <li>КЕЙСЫ</li>
-                    <li>ПРАЙС</li>
-                    <li>ОТЗЫВЫ</li>
-                    <li>КОНТАКТЫ</li>
+                    <li>Обо мне</li>
+                    <li>Услуги</li>
+                    <li>Кейсы</li>
+                    <li>Прайс</li>
+                    <li>Отзывы</li>
+                    <li>Контакты</li>
                 </ul>
             </div>
         </nav>
     </header>
     
-    <div class="main">
-       
-        <div class="title__container">
-            <h1>Привет<br> Я Андрей Браун</h1>
-            <h4>Фулл стек веб-разработчик</h4>
-            
-            <input type="submit" value="Обо мне">
-            <input type="submit" value="Мои работы">
+        <div class="main">
+
+            <div class="title__container">
+                <h1>Привет<br> Я Андрей Браун</h1>
+                <h4>Фулл стек веб-разработчик</h4>
+
+                <button>Обо мне</button>
+                <button>Мои работы</button>
+            </div>
         </div>
-    
     
         <div class="about_me">
             <h2>ОБО МНЕ</h2>
-            <img src="img/Cherta_zagolovka.png" alt="">
-            <p></p>
-            <img src="img/фотка.png" alt="">
-        
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, consequatur nam, aliquid tempore placeat modi repudiandae corrupti facere est at.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, nam asperiores perspiciatis velit laboriosam, in minima distinctio voluptates ipsam nulla</p>
+            <div class="line"></div>
             
-            <input type="submit" value="Скачать резюме">
+            <img src="img/фотка.png" alt="">
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, nihil. Architecto doloremque, nobis consequatur cumque ipsa excepturi dolorum! Totam ipsa fuga sunt quisquam ducimus unde minus laborum perspiciatis adipisci quia maxime, nihil quis cupiditate dicta minima eligendi inventore dignissimos quidem, consectetur facere dolore maiores amet nisi atque fugit. Quod, ea!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla similique deleniti iste vero enim tenetur facilis assumenda. Eos, laudantium quam repellat. Ipsa, adipisci, facilis assumenda maxime amet fugiat voluptate voluptas inventore cum consequuntur alias ratione. Expedita nostrum ullam, debitis ex!</p>
+            
+            <button>Скачать резюме</button>
         </div>
         
         <div class="what_i_can_do">
             <h2>ЧТО Я УМЕЮ</h2>
-            <img src="img/Cherta_zagolovka.png" alt="">
+            <div class="line"></div>
             
             <div class="item_scills">
-                <img src="img/ноут.png" alt="">
-                <img src="img/знак.png" alt="">
-                <img src="img/ракета.png" alt="">
-                <img src="img/граммофон.png" alt="">
+               <div class="nout">
+                   <img src="img/ноут.png" alt="">
+                   <h4>Веб-дизайн</h4>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, expedita.</p>
+               </div>
+               
+                <div class="znak">
+                    <img src="img/знак.png" alt="">
+                    <h4>Разработка</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, doloremque.</p>
+                </div> 
                 
-                <h4>Веб-дизайн</h4>
-                <h4>Разработка</h4>
-                <h4>СЕО-Оптимизация</h4>
-                <h4>Маркетинг</h4>
+                <div class="raketa">
+                    <img src="img/ракета.png" alt="">
+                    <h4>СЕО-Оптимизация</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, esse.</p>
+                </div>
                 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, expedita.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, doloremque.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, esse.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, aut!</p>
+                <div class="oralo">
+                    <img src="img/граммофон.png" alt="">
+                    <h4>Маркетинг</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, aut!</p>
+                </div>
             </div>
         </div>
         
         <div class="cases">
             <h2>КЕЙСЫ</h2>
-            <img src="img/Cherta_zagolovka.png" alt="">
+            <div class="line"></div>
             
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem corporis excepturi deleniti nobis placeat ut!</p>
             
-            <img src="img/cases_scrin.png" alt="">
+            <img src="img/cases_scrin.jpg" alt="">
             
             <div class="cases_text_left">
                 <h3>CLIENT:</h3>Какая-то компания
-                <h3>WEBSITE:</h3>http://www.somedomain.com                
+                <h3>WEBSITE:</h3><a href="#">http://www.somedomain.com</a>
+                <button>Visit live site</button>
             </div>
             
             <div class="cases_text_right">
@@ -86,14 +98,14 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quia fugit tempora vel iste dolor necessitatibus ducimus temporibus, blanditiis nihil provident debitis mollitia et sunt voluptatibus distinctio quos accusantium vitae molestias! Sapiente unde molestiae omnis porro laboriosam sequi vero error ea libero velit in, molestias officiis similique ab facilis. Quis!</p>
             </div>    
                         
-            <input type="submit" value="VISIT LIVE SITE">
+            
         </div>
         
         <div class="cost_calculation">
             <h2>РАСЧЕТ СТОИМОСТИ</h2>            
             
-            <h4>ТИП САЙТА</h4>
-            <select name="site_type" id="site_type">
+            <h3 id="site_type">ТИП САЙТА</h3>
+            <select name="site_type" id="">
                 <option value="Opt1">Сайт-визитка</option>
                 <option value="Opt2">Корпоративный</option>
                 <option value="Opt3">Личный</option>
@@ -103,7 +115,7 @@
                 <option value="Opt6">Социальная сеть</option>
             </select>
             
-            <h4>ДИЗАЙН</h4>
+            <h3>ДИЗАЙН</h3>
             <select name="design" id="design">
                 <option value="Opt1">Пушка-Бомба</option>
                 <option value="Opt2">Радует глаз</option>
@@ -112,93 +124,110 @@
                 <option value="Opt5">Сделанно за банку пива</option>
             </select>
             
-            <h4>АДАПТИВНОСТЬ</h4>
+            <h3>АДАПТИВНОСТЬ</h3>
             <select name="Adaptability" id="Adaptability">
                 <option value="Opt1">Mmm...Nice</option>
                 <option value="Opt2">Good</option>
                 <option value="Opt3">WtF, man???</option>
             </select>
-            <p></p>
-            <img src="img/линия подытога.png" alt="">
+            
+            <div class="calculation">
+                <p>Сроки<br>Стоимость</p>
 
-            <p>Сроки 0</p>
-            <p>Стоимость 0</p>
+                <div class="Itog">
+                    <p>0<br>0</p>
+                </div>
+            </div>
         </div>
         
         <div class="some_statistics">
-            <h2>НЕМНОГО СТАТИСТИКИ</h2>
-            <img src="img/Cherta_zagolovka.png" alt="">
+           
+           <h2>НЕМНОГО СТАТИСТИКИ</h2>
+           <div class="line"></div>
             
-            <div class="stats">
-                <img src="img/смайл.png" alt="">
-                <img src="img/znak_orange.png" alt="">
-                <img src="img/галочка.png" alt="">
-                <img src="img/кубок.png" alt="">
-                
-                <h2>120</h2>
-                <h2>4600</h2>
-                <h2>340</h2>
-                <h2>23</h2>
-                
-                <p>СЧАСТЛИВЫХ КЛИЕНТОВ</p>
-                <p>ЧАСОВ РАБОТЫ</p>
-                <p>ПРОЕКТОВ ЗАВЕРШЕНО</p>
-                <p>НАГРАД ПОЛУЧЕНО</p>
+           <div class="stats">
+               <div class="smile">
+                   <img src="img/смайл.png" alt="">
+                   <h3>120</h3>
+                   <p>СЧАСТЛИВЫХ КЛИЕНТОВ</p>
+               </div>
+
+               <div class="orange_znak">
+                   <img src="img/znak_orange.png" alt="">
+                   <h3>4600</h3>
+                   <p>ЧАСОВ РАБОТЫ</p>
+               </div>
+
+               <div class="galochka">
+                  <img src="img/галочка.png" alt="">
+                  <h3>340</h3>
+                  <p>ПРОЕКТОВ ЗАВЕРШЕНО</p>
+               </div>
+
+               <div class="kubok">
+                  <img src="img/кубок.png" alt="">
+                  <h3>23</h3>
+                  <p>НАГРАД ПОЛУЧЕНО</p>
+               </div>
             </div>
-            
         </div>
         
         <div class="reviews">
             <h2>ОТЗЫВЫ</h2>
-            <img src="img/Cherta_zagolovka.png" alt="">
-            <p></p>
+            <div class="line"></div>
             <img src="img/Ha-Ha.png" alt="" height="150">
             
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum est omnis illum, quasi sunt cumque.</p>
-            <p><b>Михаил,</b>Ген директор ПАО "Газпром"</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem dolorem placeat odit eius harum quae error quis ipsum illum dolores quas atque rerum aspernatur cum ab, aut sapiente fugiat veritatis, saepe molestias soluta similique.</p>
+            <p id="Miha"><b>Михаил, </b>Ген директор ПАО "Газпром"</p>
         </div>
     
         <div class="contacts">
             <h2>МОИ КОНТАКТЫ</h2>
-            <img src="img/Cherta_zagolovka.png" alt="">
-            <p></p>
+            <div class="line"></div>
+            
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis nemo, obcaecati dolorem dolore. Mollitia, nobis!</p>
             
-            <div class="contacts">
-                <img src="img/geo.png" alt="">
-                <img src="img/konvert.png" alt="">
-                <img src="img/TEL.png" alt="">
-                
-                <p>Санкт-Петербург Невский проспект 11</p>
-                <p>info@companyname.com</p>
-                <p>+7 999 999-99-99</p>
+            <div class="date">               
+               <div class="geo">
+                   <img src="img/geo.png" alt="">
+                   <p>Санкт-Петербург Невский проспект 11</p>
+               </div>
+               
+                <div class="konvert">
+                    <img src="img/konvert.png" alt="">
+                    <a id="companyname" href="#">info@companyname.com</a>
+                </div>
+                                
+                <div class="Tel">
+                    <img src="img/TEL.png" alt="">
+                    <p>+7 999 999-99-99</p>
+                </div>
             </div>            
             
             <h4>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h4>
             
-            <form action="#">
-                <input type="text" name="name_client" placeholder="Имя">
-                <input type="text" name="email_client" placeholder="Email">
+            <form class="form" action="#">
+                <input id="left" type="text" name="name_client" placeholder="Имя">
+                <input id="right" type="text" name="email_client" placeholder="Email">
                 <textarea name="massage_client" id="massage" placeholder="Сообщение"></textarea>
-                <input type="submit" value="Отправить">
+                <button id="Send">Отправить</button>
             </form>
             
             <div class="icons">
-                <img src="img/facebook.png" alt="">
-                <img src="img/twitter.png" alt="">
-                <img src="img/bol.png" alt="">
-                <img src="img/kisa.png" alt="">
-                <img src="img/inst.png" alt="">
-                <img src="img/in.png" alt="">
+                <a href="#"><img src="img/facebook.png" alt=""></a>
+                <a href="#"><img src="img/twitter.png" alt=""></a>
+                <a href="#"><img src="img/bol.png" alt=""></a>
+                <a href="#"><img src="img/kisa.png" alt=""></a>
+                <a href="#"><img src="img/inst.png" alt=""></a>
+                <a href="#"><img src="img/in.png" alt=""></a>
             </div>
-            
-            <img src="img/maps.png" alt="" width="100%">
         </div>
-    </div>
+        
+        <img src="img/maps.png" alt="" width="100%">
     
-    <div class="footer">
+       <footer>
         <h6>Copyright © 2021 Андрей Браун. Design by Web</h6>
-    </div>
+    </footer> 
 </body>
 
 </html> 
