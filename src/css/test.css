@@ -1,0 +1,20 @@
+.knopka{
+    color: black;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 5px 10px 30px;
+    margin: 50px auto;
+
+
+}
+
+
+button::before{
+    content: '\f17b';
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+    font-weight: 900;
+    width: 32px;
+    height: 32px;
+    color: #aaa;
+}

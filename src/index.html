@@ -5,21 +5,27 @@
     <title>Андрей Браун Веб-разработчик</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
 </head>
 
 <body>
-   
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
     <header>
         <nav>
             <div class="logo">Андрей Браун</div>
             <div class="menu">
                 <ul>
-                    <li>Обо мне</li>
-                    <li>Услуги</li>
-                    <li>Кейсы</li>
-                    <li>Прайс</li>
-                    <li>Отзывы</li>
-                    <li>Контакты</li>
+                    <li><a href="#">Обо мне</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Кейсы</a></li>
+                    <li><a href="#">Прайс</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Контакты</a></li>
                 </ul>
             </div>
         </nav>
@@ -31,8 +37,8 @@
                 <h1>Привет<br> Я Андрей Браун</h1>
                 <h4>Фулл стек веб-разработчик</h4>
 
-                <button>Обо мне</button>
-                <button>Мои работы</button>
+                <input type="button" value="Обо мне">
+                <input type="button" value="Мои работы">
             </div>
         </div>
     
@@ -45,7 +51,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, nihil. Architecto doloremque, nobis consequatur cumque ipsa excepturi dolorum! Totam ipsa fuga sunt quisquam ducimus unde minus laborum perspiciatis adipisci quia maxime, nihil quis cupiditate dicta minima eligendi inventore dignissimos quidem, consectetur facere dolore maiores amet nisi atque fugit. Quod, ea!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla similique deleniti iste vero enim tenetur facilis assumenda. Eos, laudantium quam repellat. Ipsa, adipisci, facilis assumenda maxime amet fugiat voluptate voluptas inventore cum consequuntur alias ratione. Expedita nostrum ullam, debitis ex!</p>
             
-            <button>Скачать резюме</button>
+            <button type="button">Скачать резюме</button>
         </div>
         
         <div class="what_i_can_do">
@@ -53,26 +59,22 @@
             <div class="line"></div>
             
             <div class="item_scills">
-               <div class="nout">
-                   <img src="img/ноут.png" alt="">
+               <div class="nout">                   
                    <h4>Веб-дизайн</h4>
                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, expedita.</p>
                </div>
                
-                <div class="znak">
-                    <img src="img/знак.png" alt="">
+                <div class="znak">                    
                     <h4>Разработка</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, doloremque.</p>
                 </div> 
                 
-                <div class="raketa">
-                    <img src="img/ракета.png" alt="">
+                <div class="raketa"> 
                     <h4>СЕО-Оптимизация</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, esse.</p>
                 </div>
                 
                 <div class="oralo">
-                    <img src="img/граммофон.png" alt="">
                     <h4>Маркетинг</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, aut!</p>
                 </div>
@@ -140,37 +142,37 @@
             </div>
         </div>
         
-        <div class="some_statistics">
-           
-           <h2>НЕМНОГО СТАТИСТИКИ</h2>
-           <div class="line"></div>
-            
-           <div class="stats">
-               <div class="smile">
-                   <img src="img/смайл.png" alt="">
-                   <h3>120</h3>
-                   <p>СЧАСТЛИВЫХ КЛИЕНТОВ</p>
-               </div>
+        
+        <div class="parallax">
 
-               <div class="orange_znak">
-                   <img src="img/znak_orange.png" alt="">
-                   <h3>4600</h3>
-                   <p>ЧАСОВ РАБОТЫ</p>
-               </div>
+            <div class="parallax_content">
+                <h2>НЕМНОГО СТАТИСТИКИ</h2>
+                <div class="line"></div>
 
-               <div class="galochka">
-                  <img src="img/галочка.png" alt="">
-                  <h3>340</h3>
-                  <p>ПРОЕКТОВ ЗАВЕРШЕНО</p>
-               </div>
+                <div class="stats">
+                    <div class="smile">
+                        <h3>120</h3>
+                        <p>СЧАСТЛИВЫХ КЛИЕНТОВ</p>
+                    </div>
 
-               <div class="kubok">
-                  <img src="img/кубок.png" alt="">
-                  <h3>23</h3>
-                  <p>НАГРАД ПОЛУЧЕНО</p>
-               </div>
+                    <div class="orange_znak">
+                        <h3>4600</h3>
+                        <p>ЧАСОВ РАБОТЫ</p>
+                    </div>
+
+                    <div class="galochka">
+                        <h3>340</h3>
+                        <p>ПРОЕКТОВ ЗАВЕРШЕНО</p>
+                    </div>
+
+                    <div class="kubok">
+                        <h3>23</h3>
+                        <p>НАГРАД ПОЛУЧЕНО</p>
+                    </div>
+                </div>
             </div>
         </div>
+        
         
         <div class="reviews">
             <h2>ОТЗЫВЫ</h2>
@@ -181,6 +183,7 @@
             <p id="Miha"><b>Михаил, </b>Ген директор ПАО "Газпром"</p>
         </div>
     
+       
         <div class="contacts">
             <h2>МОИ КОНТАКТЫ</h2>
             <div class="line"></div>
@@ -188,18 +191,15 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis nemo, obcaecati dolorem dolore. Mollitia, nobis!</p>
             
             <div class="date">               
-               <div class="geo">
-                   <img src="img/geo.png" alt="">
+               <div class="Geo">
                    <p>Санкт-Петербург Невский проспект 11</p>
                </div>
                
                 <div class="konvert">
-                    <img src="img/konvert.png" alt="">
                     <a id="companyname" href="#">info@companyname.com</a>
                 </div>
                                 
                 <div class="Tel">
-                    <img src="img/TEL.png" alt="">
                     <p>+7 999 999-99-99</p>
                 </div>
             </div>            
@@ -210,21 +210,25 @@
                 <input id="left" type="text" name="name_client" placeholder="Имя">
                 <input id="right" type="text" name="email_client" placeholder="Email">
                 <textarea name="massage_client" id="massage" placeholder="Сообщение"></textarea>
-                <button id="Send">Отправить</button>
+                <input id="Send" type="button" value="Отправить">
             </form>
             
             <div class="icons">
-                <a href="#"><img src="img/facebook.png" alt=""></a>
-                <a href="#"><img src="img/twitter.png" alt=""></a>
-                <a href="#"><img src="img/bol.png" alt=""></a>
-                <a href="#"><img src="img/kisa.png" alt=""></a>
-                <a href="#"><img src="img/inst.png" alt=""></a>
-                <a href="#"><img src="img/in.png" alt=""></a>
+                <ul>
+                    <li></li>
+                    <li id="twitter"></li>
+                    <li id="bol"></li>
+                    <li id="kisa"></li>
+                    <li id="inst"></li>
+                    <li id="in"></li>
+                </ul>
             </div>
         </div>
         
+        
         <img src="img/maps.png" alt="" width="100%">
     
+      
        <footer>
         <h6>Copyright © 2021 Андрей Браун. Design by Web</h6>
     </footer> 
