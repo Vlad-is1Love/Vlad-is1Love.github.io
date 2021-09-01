@@ -1,121 +1,49 @@
 body{
-    font-family: Arial, sans-serif;
+    font-family: Franklin Gothic, sans-serif;
 }
-
-/*preloader*/
-.preloader{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    z-index: 300;
-    visibility: visible;
-    animation:1s invis 1 2s linear forwards;
-}
-
-@keyframes invis{
-    from{
-        visibility: visible;
-    }
-    
-    to{
-        visibility: hidden;
-    }
-}
-
-.loader{
-    width: 150px;
-    height: 150px;
-    border: 2px solid #eae4ea;
-    border-radius: 50%;
-    box-shadow: 0 -2px 2px rgba(0,0,0,.2);
-    border-left: 10px solid #6ddfca;
-    margin: 21% auto;
-    animation: 1s loader infinite;
-}
-
-.loader:before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  bottom: 10px;
-  right: 10px;
-  border: 2px solid #eae4ea;
-  box-shadow: 0 -2px 2px rgba(0,0,0,.2);
-  border-left: 2px solid #d355be;
-  border-radius: 50%;
-  animation: loader 2s linear infinite;
-}
-
-.loader:after {
-  content: '';
-  position: absolute;
-  top: 22px;
-  left: 22px;
-  bottom: 22px;
-  right: 22px;
-  border: 2px solid #eae4ea;
-  box-shadow: 0 -2px 2px rgba(0,0,0,.2);
-  border-bottom: 2px solid #8c23ec;
-  border-radius: 50%;
-  animation: loader 1s linear infinite;
-}
-
-@keyframes loader{
-    from{
-        transform: rotate(0deg);
-    }
-    
-    to{
-        transform: rotate(360deg);
-    }
-}
-
 
 h2{
-    padding: 90px 0px 0px;
-    width: 100%;
-    text-align: center;
-    font-size: 26px; 
+    font-size: 25px;
 }
 
-/*--header--*/
 nav{
     width: 100%;
     height: 60px;
     background: #344051;
     position: fixed;
-    z-index: 100;
+    text-align: center;
+    z-index: 2;
 }
 
 .logo{
     color: #fff;
     font-size: 24px;
     line-height: 60px;
-    padding-left: 388px;
-    float: left;
-    animation: comming 2.3s;
-}
-
-.menu{
-    float: left;
-    padding-left: 415px;
 }
 
 .menu li{
     float: left;
-    margin: 0 20px;
     font-size: 16px;
     line-height: 60px;
     color: #fff;
-    text-transform: uppercase;
+    margin: 0 20px;
+    /*text-transform: uppercase;
     -webkit-animation: topshift 1s ease forwards;
     -o-animation: topshift 1s ease forwards;
     animation: topshift 1s ease forwards;
-    opacity: 0;
+    opacity: 0;*/
+}
+
+@keyframes topshift{
+    from{
+        opacity: 0;        
+        margin-top: -80px;
+    }
+    
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
 }
 
 .menu li:nth-child(2){
@@ -142,6 +70,7 @@ nav{
     transition: all 0.1s;
     color: white;
     display: inline-block;
+    text-decoration: none;
 }
 
 .menu li a:visited{
@@ -157,41 +86,41 @@ nav{
     transform: scale(1.2);
 }
 
-@keyframes comming{
-    from{
-        opacity: 0;
-    }
-    
-    to{
-        opacity: 1;
-    }
+#dropdownMenuLink{
+    color: #fff;
+    transition: all 0.2s;
 }
 
-@keyframes topshift{
-    from{
-        opacity: 0;        
-        margin-top: -80px;
-    }
-    
-    to{
-        opacity: 1;
-        margin-top: 0px;
-    }
+#dropdownMenuLink:hover{
+    transition: all 0.2s;
+    transform: scale(1.1);
+}
+
+#dropdownMenuLink:visited{
+    color: white;
+}
+
+.dropdown a::before{
+    content:"\e90b";
+    font-family: 'icomoon' !important;
+    font-size: 15px;
+    padding-right: 5px;
 }
 
 
 /*--main--*/
 .main{
-    width: 100%;
-    height: 100%;
-    background: url(../img/boy.png)90% 100%/auto 85% no-repeat,url(../img/fon.png) center/cover no-repeat;
+    width: 100wh;
+    height: 100vh;
+    background: url(../img/boy.png) 90% 100%/auto 85% no-repeat,url(../img/fon.png) center/cover no-repeat;
 }
 
 .title__container{
+    margin-top: 30%;
     float:left;
-    margin: 360px 0px 0px 390px;
     color: #2c384a;
     text-align: center;
+    width: 100%;
     -webkit-animation: titlemove 0.7s forwards;
     -o-animation: titlemove 0.7s forwards;
     animation: titlemove 0.7s forwards;
@@ -200,8 +129,8 @@ nav{
 }
 
 .title__container h1{
-    font-size: 60px;
-    font-weight: bold;
+    font-size: 85px;
+    font-weight: normal;
 }
 
 .title__container h4{
@@ -237,17 +166,45 @@ nav{
     
     to{
         opacity: 1;
-        margin-left: 390px;
+        margin-left: 0;
     }
 }
 
-/*--about me--*/
-.about_me{
-    height: 900px;
+@media (max-width: 991px){
+    .title__container, .title__container h4, .title__container input{
+        color: white;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .title__container input{
+        border: 2px solid #fff;
+    }
+    
+    .main{
+        position: relative;
+    }
+    
+    .main::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0, .4);
+    }
+    
+    .title__container{
+        animation-delay: 2.2s ;
+    }
 }
 
+
+
+/*--about me--*/
 .about_me img{
-    width: 200px;
+    width: 180px;
     margin-top: 60px;
     display: block;
     margin-left: auto;
@@ -255,34 +212,27 @@ nav{
 }
 
 .about_me p{
-    text-align: center;
+    font-family: Calibri;
     font-size: 16px;
-    margin: 30px auto;
-    line-height: 32px;
-    width: 40%;
+    line-height: 14px;
 }
 
 .about_me button{
     height: 34px;
-    text-align: center;
     color: #6f707e;
     border: 2px solid #6f707e;
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 13px;
     background:white;
     padding-left: 21px;
     padding-right: 7px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
 }
 
 .about_me button::before{
     position: absolute;
-    content: "\f019";
-    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
-    font-weight: 900;
+    content: "\e908";
+    font-family: 'icomoon' !important;
     color: #aaa;
     left: 5px;
 }
@@ -293,405 +243,82 @@ nav{
 
 /*--orange line--*/
 .line{
-    margin-left: auto;
-    margin-right: auto;
     padding: 15px 0px;
     width: 60px;
     border-bottom: 5px solid #d17700;
 }
 
+
 /*--What i can do--*/
 .what_i_can_do{
-    height: 520px;
     background-image: url(../img/I_do_fon.png);
 }
 
-.item_scills{
-    width: 65%;
-    display: flex;
-    justify-content: space-between;
-    margin: 60px auto;
-}
-
-.item_scills h4{
-    color: #cf7600;
-    font-weight: 700;
-    margin: 35px 0px 35px 0px;
-}
-
-.nout, .znak, .raketa, .oralo{
-    margin-top: 70px;
-    width: 190px;
-    text-align: center;
-    position: relative;
-}
-
-.nout::before, .znak::before, .raketa::before, .oralo::before{
-    position: absolute;
-    right: 70px;
-    bottom: 140px;
-    content: "\f109";
-    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
-    font-weight: 600;
-    font-size: 47px;
-    color: #313d4e;
-}
-.znak::before{
-    content: "\f121";
-    font-weight: 600;
-}
-.raketa::before{
-    content: "\f135";
-}
-.oralo::before{
-    content: "\f0a1";
-}
-
-/*--cases--*/
-.cases{
-    height: 1160px;
-}
-
-.cases p{
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-    padding: 42px 0px;
-}
-
-.cases img{
-    display: block;
-    height: 590px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cases_text_left{
-    float: left;
-    margin-top: 40px;
-    margin-left: 390px;
-    height: 105px;
-    width: 190px;
-}
-
-.cases_text_left h3{
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 32px;
-}
-
-.cases button{
-    margin-top: 15px;
-    height: 46px;
-    background-color: #63b5ae;
-    color: #fff;
-    font-size: 17px;
-    padding: 0 30px;
-    border-radius: 6px;
-    text-transform: uppercase;
-}
-
-.cases button:active{
-    transition: all 0.1s;
-    transform: scale(1.1)
-}
-
-.cases_text_right{
-    float: left;
-    margin-top: 40px;
-    height: 105px;
-    width: 970px;
-    padding-left: 100px;
-}
-
-.cases_text_right h3{
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 32px;
-}
-
-.cases_text_right p{
-    text-align: left;
-    font-size: 15px;
-    padding: 0px;
-    line-height: 20px;
-}
-
-
-/*--cost--*/
-.cost_calculation{
-    height: 700px;
-    width: 47%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cost_calculation h3{
-    font-size: 18px;
-    font-weight: 600;
-    margin: 24px 0 15px 0;
-}
-
-#site_type{
-    margin-top: 80px;
-}
-
-.cost_calculation select{
-    width: 100%;
-    background-color: #eee;
-    color: #a2a2a2;
-    font-size: 15px;
-    padding: 10px 0px 10px 3px;
-    cursor: pointer;
-}
-
-#Adaptability{
-    margin-bottom: 35px;
-}
-
-.calculation{
+.what_i_can_do .row h4{
+    font-family: Bahnschrift;
+    font-size: 21px;
+    font-weight: 900;
+    color: #e87700;
     padding-top: 30px;
-    border-top: 2px solid #eee;
+    padding-bottom: 15px;
 }
 
-.calculation p{
-    float: left;
-    width: 50%;
-    text-align: left;
-    font-weight: 600;
+.what_i_can_do .row p{
+    font-family: Calibri;
+    line-height: 17px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
-.calculation .Itog p{
-    text-align: right;
+#nout, #znak, #raketa, #oralo::before{
+    font-family: 'icomoon' !important;
+    font-size: 50px;
+    font-weight: 500;
 }
 
-
-/*--some_statistics--*/
-.parallax{
-    background-image: url(../img/parallax.jpeg);
-    background-attachment: fixed;
-    background-size: cover;
-    height: 500px;
-    position: relative;
-}
-
-.stats{
-    display: flex;
-    position: relative;
-    width: 60%;
-    justify-content: center;
-    margin: 60px auto;
-    font-weight: 400;
-}
-
-.stats h3{
-    color: #000;
+#nout::before{
+    content: "\e907";
     font-weight: 900;
-    font-size: 26px;
-    margin: 30px 0;
 }
 
-.smile, .orange_znak, .galochka, .kubok{
-    width: 300px;
-    color: #000;
-    text-align: center;
+#znak::before{
+    content: "\e909";
 }
 
-.smile::before, .orange_znak::before, .galochka::before, .kubok::before{
-    content: "\f118";
-    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
-    font-weight: 900;
-    font-size: 47px;
-    color: #cf7600;
+#raketa::before{
+    content: "\e906";
 }
-.orange_znak::before{
-    content: "\f121"
-}
-.galochka::before{
-    content: "\f00c"
-}
-.kubok::before{
-    content: "\f091"
+
+#oralo::before{
+    content: "\e90a";
 }
 
 
-/*--reviews--*/
-.reviews{
-    height: 590px;
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    line-height: 15px;
-    z-index: 100;
-}
-
-.reviews img{
-    margin: 70px 0;
-}
-
-#Miha{
-    margin-top: 20px;
-}
 
 
-/*--contacts--*/
-.contacts{
-    height: 810px;
-    background: url(../img/contacts_fon.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% auto;
-    color: #fff;
-    text-align: center;
-}
 
-.contacts>p{
-    margin: 50px 0;
-}
 
-.date{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    width:40%;
-    margin: 60px auto;
-}
 
-.Geo, .konvert, .Tel{
-    margin: 20px 50px 0 50px;
-    display: inline-block;
-    width: 150px;
-    text-align: center;
-    line-height: 30px;
-}
 
-.Geo::before, .konvert::before, .Tel::before{
-    content: "\f041";
-    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
-    font-weight: 600;
-    font-size: 30px;
-    color: #fff;    
-}
-.konvert::before{
-    content: "\f0e0";
-}
-.Tel::before{
-    content: "\f095";
-}
 
-.contacts h4{
-    clear: both;
-    margin-top: 70px;
-}
 
-#companyname{
-    color: #fff;
-    padding: 15px 0;
-}
 
-.form{
-    width: 40%;
-    margin: 30px auto;
-}
 
-#left:focus, #right:focus, #massage:focus{
-    box-shadow: 0 0 4px 1px #88dccf;
-}
 
-.contacts input{
-    font-size: 12px;
-    line-height: 22px;
-    padding: 5px 0 5px 4px;
-}
 
-#left{
-    float: left;
-    width: 47%;
-}
 
-#right{
-    float: right;
-    width: 47%;
-}
 
-#massage{
-    width: 100%;
-    height: 80px;
-    resize: none; 
-    margin: 15px auto;
-    padding: 5px 0 0 4px;
-}
 
-#Send{
-    display: block;
-    margin: 15px auto;
-    padding: 6px 10px;
-    background: none;
-    border: 1px solid #fff;
-    border-radius: 6px;
-    color: #fff;
-    transition: transform 0.1s;
-}
 
-#Send:hover{
-    transition: transform 0.1s;
-    transform: scale(1.1);
-    background: white;
-    color: black;
-}
 
-.icons{
-    display: flex;
-    width: 25%;
-    justify-content: center;
-    margin: 50px auto;
-}
 
-.icons li{
-    display: inline-block;
-    width: 70px;
-    text-align: center;
-}
-.icons li::before{
-    content: "\f09a";
-    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
-    font-weight: 600;
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;
-}
 
-.icons li:hover{
-    transform: scale(1.2);
-}
 
-#twitter::before{
-    content: "\f099";
-}
 
-#bol::before{
-    content: "\f17d";
-}
-#kisa::before{
-    content: "\f09b";
-}
-#inst::before{
-    content: "\f16d";
-}
-#in::before{
-    content: "\f0e1";
-}
 
-/*--footer--*/
-footer{
-    height: 100px;
-    background: #354051;
-}
 
-footer h6{
-    line-height: 100px;
-    padding: 30px auto;
-    color: #fff;
-    text-align: center;
-}
+
+
+
+
+
