@@ -16,7 +16,7 @@ nav{
     background: #344051;
     position: fixed;
     text-align: center;
-    z-index: 2;
+    z-index: 5;
 }
 
 .logo{
@@ -32,10 +32,10 @@ nav{
     color: #fff;
     margin: 0 20px;
     text-transform: uppercase;
-    /*-webkit-animation: topshift 1s ease forwards;
+    -webkit-animation: topshift 1s ease forwards;
     -o-animation: topshift 1s ease forwards;
     animation: topshift 1s ease forwards;
-    opacity: 0;*/
+    opacity: 0;
 }
 
 @keyframes topshift{
@@ -51,23 +51,23 @@ nav{
 }
 
 .menu li:nth-child(2){
-    animation-delay: 2.4s;
+    animation-delay: 0.4s;
 } 
 
 .menu li:nth-child(3){
-    animation-delay: 2.8s;
+    animation-delay: 0.8s;
 } 
 
 .menu li:nth-child(4){
-    animation-delay: 3.2s;
+    animation-delay: 1.2s;
 } 
 
 .menu li:nth-child(5){
-    animation-delay: 3.6s;
+    animation-delay: 1.6s;
 } 
 
 .menu li:nth-child(6){
-    animation-delay: 4s;
+    animation-delay: 2s;
 } 
 
 .menu li a{
@@ -140,11 +140,11 @@ nav{
     color: #2c384a;
     text-align: center;
     width: 100%;
-    /*-webkit-animation: titlemove 0.7s forwards;
+    -webkit-animation: titlemove 0.7s forwards;
     -o-animation: titlemove 0.7s forwards;
     animation: titlemove 0.7s forwards;
-    animation-delay:4.1s ;
-    opacity: 0;*/
+    animation-delay: 2.1s ;
+    opacity: 0;
 }
 
 .title__container h1{
@@ -353,7 +353,39 @@ nav{
 
 .cases .row input:active{
     transition: all 0.1s;
-    transform: scale(1.1)
+    transform: scale(1.1);
+}
+
+#carouselExampleIndicators{
+    width: 100%;
+}
+
+
+/*--Модальное окно при открытии cases--*/
+.modal-body img{
+    width: 100%;
+}
+
+#exampleModal .modal-dialog{
+    max-width: 80%;
+}
+
+#exampleModal .modal-content{         
+    background: #808080;
+}
+
+#exampleModal .modal-content>button{
+    left: 95%;
+    top: 2%;
+    transform: scale(1.6);
+    background: none;
+}
+
+#exampleModal .modal-content>button::before{
+    content: "\e912";
+    font-family: 'icomoon' !important;
+    color: #fff;
+    font-size: 25px;
 }
 
 
@@ -375,6 +407,7 @@ nav{
 .cost_calculation select{
     background: #eee;
     padding: 10px;
+    border-radius: 6px;
 }
 
 .calculation{
@@ -385,7 +418,7 @@ nav{
     font-size: 16px;
 }
 
-.zero{
+#dateItog, #sumItog{
     text-align: end;
     font-weight: 700;
     font-size: 20px;
@@ -426,6 +459,15 @@ nav{
     padding-bottom: 15px;
 }
 
+.element-animation{
+    opacity: 0;
+}
+
+.element-animation.show-animation{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
 .parallax .row p{
     line-height: 16px;
     font-size: 18px;
@@ -459,8 +501,32 @@ nav{
 /*--reviews--*/
 .reviews p{
     font-family: Calibri;
-    font-size: 18px;
 }
+
+/*reviews carusel*/
+.reviews #carouselExampleIndicatorsReviews img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+}
+
+.reviews #carouselExampleIndicatorsReviews .carousel-indicators>button{
+    background: #ea7e00;
+    width: 30px;
+    height: 10px;
+    border-radius: 50%;
+    transform: scale(0.5);
+}
+
+.reviews .carousel-control-prev-icon, .reviews .carousel-control-next-icon{
+    width: 60px;
+    border-radius: 6px;
+    background: #ea7e00;
+    color: black;
+    line-height: 27px;
+}
+
 
 
 /*--contacts--*/
@@ -475,6 +541,8 @@ nav{
 .contacts>.container>p{
     margin: 30px 0;
 }
+
+
 
 
 #Geo, #konvert, #Tel{
