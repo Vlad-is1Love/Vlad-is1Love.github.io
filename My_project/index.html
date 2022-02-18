@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Влад Уваров, веб-разработчик, создание сайтов. </title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+
+    <meta name="description" content="Влад Уваров фулл стек веб-разработчик. Создание сайтов любой сложности на заказ за кратчайшие сроки. Большой спектр выполняемых заказов и всегда абсолютно довольные клиенты.">
+
+    <!--<meta name="keywords" content="создание сайтов, разработка сайтов, сайт, разработчик, веб, веб-дизайн, верстка, оптимизация,Влад, Уваров">-->
+
+    <meta name="Author" content="Влад Уваров">
+
+
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Влад Уваров. Веб-разработчик">
+    <meta property="og:description" content="Написание сайтов на заказ.">
+    <meta property="og:url" content="https://uvarov-web.site/">
+    <meta property="og:image" content="https://uvarov-web.site/img/fon.jpg">
+
+    <link rel="icon" sizes="32x32" href="img/fav_icon.png">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/reset.css">  
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="row ">
+                    <div class="col-xl-2 col-lg-3 col-9">
+                        <div class="logo" id="logo"><a href="#">Влад Уваров</a></div>
+                    </div>
+                    
+                    <div class="menu px-0 offset-xl-4 offset-lg-1 col-xl-6 col-lg-8 d-none d-lg-block">
+                        <ul>
+                            <li><a href="#about_me">Обо мне</a></li>
+                            <li><a href="#what_i_can_do">Услуги</a></li>
+                            <!--<li><a href="#cases">Кейсы</a></li>-->
+                            <li><a href="#calculation">Прайс</a></li>
+                            <li><a href="#reviews">Отзывы</a></li>
+                            <li><a href="#contacts">Контакты</a></li>                            
+                        </ul>
+                    </div>
+
+                    <div class="col-3 d-flex d-lg-none flex-column justify-content-center align-items-end">
+                        <div class="dropdown">
+                            <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"></a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#about_me">Обо мне</a></li>
+                                <li><a class="dropdown-item" href="#what_i_can_do">Услуги</a></li>
+                                <!--<li><a class="dropdown-item" href="#cases">Кейсы</a></li>-->
+                                <li><a class="dropdown-item" href="#calculation">Прайс</a></li>
+                                <li><a class="dropdown-item" href="#reviews">Отзывы</a></li>
+                                <li><a class="dropdown-item" href="#contacts">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+
+    
+    <!--MAIN-->    
+        <div class="main">
+            <div class="container h-100">
+                <div class="row align-items-center h-100">
+                    <div class="col-lg-6">
+                        <div class="title__container">
+                            <h1>Привет<br> Я Влад Уваров</h1>
+                            <h4>Фулл стек веб-разработчик</h4>
+
+                            <input type="button" value="Написать мне" id="Write_to_me">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <!-- Modal-->
+       <div class="modal" id="justModal" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <div class="container">
+                    <div class="row">
+                        <h5 class="modal-title col-6 pt-2">- Вам нужен сайт?<br>- Свяжитесь со мной!</h5>
+                        <img class="col-3" src="img/modal_konvert.jpg" alt="">
+                        <button type="button" class="btn-close col-1" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+              </div>
+
+              <div class="modal-body">
+                <div class="container">
+                    <form enctype="multipart/form-data" method="post" onsubmit="send(event, 'send.php')">
+                        <div class="row py-3">
+                            <div class="col-3 text-end">Имя:</div>
+                            <input type="text" required class="col-9 modal_input" name="user_name">
+                        </div>
+                        
+                        <div class="row py-3">
+                            <div class="col-3 text-end">E-mail:</div>
+                            <input type="email" required class="col-9 modal_input" name="user_email">
+                        </div>
+
+                        <div class="row py-3">
+                            <div class="col-3 text-end">Телефон:</div>
+                            <input type="tel"  class="col-9 modal_input" name="user_tel">
+                        </div>
+
+                        <div class="row py-3">
+                            <div class="col-3 text-end">Сообщение:</div>
+                            <textarea class="col-9 modal_massage" name="user_massage"></textarea>
+                        </div>
+
+                        <div class="row align-items-center pb-3">
+                            <p class="col-3 text-end">Прикрепить файлы</p>
+                            <input type="file" class="col-9" name="myfile[]" multiple id="user_file">
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <input type="reset" class="btn btn-secondary col-3" data-bs-dismiss="modal" value="Отменить">
+                            <input type="submit" class="btn btn-primary offset-1 col-3" value="Отправить">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-5"><p></p></div>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    <!--ABOUT ME-->
+        <div class="about_me" id="about_me">
+            <div class="container py-5 my-5 text-center">
+                
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <h2>ОБО МНЕ</h2>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="row justify-content-around">                    
+                    <div class="col-12 col-lg-4 mt-5">
+                        
+                        <div id="bigKrug">
+                            <div class="oblast">
+                                <button class="smile"></button>
+                                <button class="teacher"></button>
+                                <button class="client"></button>
+                                <button class="information"></button>
+                                <button class="celi"></button>
+                                <button class="hobbi"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 px-5 mt-5">
+                        <div class="smileText Text">
+                            <h2>Обо мне</h2>
+                            <img src="img/фотка.png" alt="" class="mb-3">
+                            <p>Я - Влад Уваров, начинающий, но безумно мотивированный веб-разработчик!</p>
+                        </div>
+                        <div class="teacherText Text">
+                            <h2>Моё образование</h2>
+                            <div class="row">
+                                <div class="col-3"><p>Институт: </p></div>
+                                <div class="col-9"><p>БГТУ им. В.Г.Шухова;</p></div>
+                            </div>
+                            <div class="row my-2">
+                                <div class="col-lg-3 col-12"><p>Специальность: </p></div>
+                                <div class="offset-lg-1 col-lg-8 col-12"><p>Электроэнергетика;</p></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12"><p>Закончил в 2022 году с отличием.</p></div>
+                            </div>
+                        </div>
+                        <div class="clientText Text">
+                            <h2>Внимание к каждому клиенту</h2>
+                            <p>Построение долгосрочных отношений с клиентом - вот моя главная задача. <br>Обеспечивается она качеством итогового проекта, а также поддержанием обратной связи на всем этапе разработки.</p>
+                        </div>
+                        <div class="informationText Text">
+                            <h2 class="mb-4">Полное резюме тут</h2>
+                            <button type="button"><a href="content/resume.pdf" target="_blank">Скачать резюме</a></button>
+                        </div>
+                        <div class="celiText Text">
+                            <h2>Мои цели</h2>
+                            <p>находятся за пределами этой вселенной...</p>
+                            <p>и немного дальше =)</p>
+                        </div>
+                        <div class="hobbiText Text">
+                            <h2>Моё хобби</h2>
+                            <p>Чтобы написать сайт - нужно думать как сайт.</p>
+                            <p>Большую часть свободного времени провожу за изучением рабочей литературы - ведь нет предела совершенству!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="knopki row justify-content-around py-5 my-3">
+                    <div class="col-5 d-flex justify-content-end">
+                        <div class="arrow previous" id="previous"></div>
+                    </div>
+
+                    <div class="col-1"></div>
+
+                    <div class="col-5 d-flex justify-content-start">
+                        <div class="arrow next" id="next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <!--WHAT I CAN DO-->
+        <div class="what_i_can_do" id="what_i_can_do">
+            <div class="container py-5 d-flex flex-column align-items-center">
+                <h2>ЧТО Я УМЕЮ</h2>
+                <div class="line"></div>
+                
+                <div class="row py-5 my-5 justify-content-around text-center">
+                    <div id="nout" class="col-12 col-lg-3 py-4 py-lg-0">
+                        <h4>Веб-дизайн</h4>
+                       <p>Оригинален и свеж.<br>Знание современного рынка позволяет быть на волне актуальности. Для каждого клиента на выбор прорабатываются 2-3 уникальных стиля.</p>
+                    </div>
+                    <div id="znak" class="col-12 col-lg-3 py-4 py-lg-0">
+                        <h4>Разработка</h4>
+                        <p>Выполняется в несколько этапов.<br>На каждом следует связь с клиентом и дальнейшее утверждение структуры или дизайна сайта.</p>
+                    </div>
+                    <div id="raketa" class="col-12 col-lg-3 py-4 py-lg-0">
+                        <h4>СЕО-Оптимизация</h4>
+                        <p>Все мои проекты я делаю адаптивными.<br>Это значит, что ваш сайт всегда будет выглядеть превосходно — хоть на широкоэкранном мониторе, хоть на смартфоне.</p>
+                    </div>
+                    <div id="oralo" class="col-12 col-lg-3 pt-4 py-lg-0">
+                        <h4>Маркетинг</h4>
+                        <p>Применение системы аналитики и использование мета-тегов для продвижения сайта.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!--CASES-->
+        <div class="cases d-none" id="cases">
+            <div class="container py-5 d-flex flex-column align-items-center">
+                <h2>КЕЙСЫ</h2>
+                <div class="line"></div>
+
+                <p>ТУТ ДОЛЖНЫ БЫТЬ ПРИМЕРЫ МОИХ РАБОТ... НО ПОКА ЧТО ИХ НЕТ((</p>
+
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/wonder-woman.jpg" class="d-block w-100" alt="https://www.pixel4k.com/wp-content/uploads/2019/07/wonder-woman-1984-modern-art_1563220281.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/monro.jpg" class="d-block w-100" alt="https://phonoteka.org/uploads/posts/2021-07/1625612493_5-phonoteka-org-p-tsveta-pop-arta-krasivo-5.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/tiger.jpg" class="d-block w-100" alt="https://i.ytimg.com/vi/CMbG_qlmekY/maxresdefault_live.jpg">
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+
+
+                <div class="row my-5">
+                    <div class="col-3 ">
+                        <h3>CLIENT:</h3>
+                        <span>Какая-то компания</span>
+                        <h3>WEBSITE:</h3>
+                        <a href="#">http://www.somedomain.com</a>
+                        <br>
+                        <input type="button" value="Visit live site" disabled>
+                    </div>
+                    
+
+                    <div class="col-12 col-md-9 px-5">
+                        <h3>Название проекта</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quia fugit tempora vel iste dolor necessitatibus ducimus temporibus, blanditiis nihil provident debitis mollitia et sunt voluptatibus distinctio quos accusantium vitae molestias! Sapiente unde molestiae omnis porro laboriosam sequi vero error ea libero velit in, molestias officiis similique ab facilis. Quis!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for cases -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        
+                        <button type="button" class="btn-close position-fixed" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                        <div class="modal-body">
+                            <img src="" alt="">
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+
+    <!--COST CALCULATION-->
+        <div class="cost_calculation py-5 mb-5" id="calculation">
+            <div class="container py-5 col-10 d-flex flex-column ">  
+                <h2>РАСЧЕТ СТОИМОСТИ</h2>            
+
+                <h3>ТИП САЙТА</h3>
+                <select name="site_type" id="site_type">
+                    <option valCost="?" valTime="?" selected>Выберите из списка...</option>
+                    <option valCost="2000" valDay="1">Сайт-визитка</option>
+                    <option valCost="6000" valDay="2">Корпоративный</option>
+                    <option valCost="3000" valDay="2">Личный</option>                    
+                    <option valCost="5000" valDay="3">Доска объявлений</option>
+                </select>
+
+                <h3>ДИЗАЙН</h3>
+                <select name="design" id="design">
+                    <option valCost="?"   valK1="?" selected>Выберите из списка...</option>
+                    <option valCost="2500" valK1="5">Пушка-Бомба</option>
+                    <option valCost="2000" valK1="4">Радует глаз</option>
+                    <option valCost="1300" valK1="3">Ну...Пойдет</option>
+                    <option valCost="200" valK1="1">Могло быть и хуже</option>
+                </select>
+
+                <h3>АДАПТИВНОСТЬ</h3>
+                <select name="Adaptability" id="Adaptability">
+                    <option valCost="?" valK2="?" selected>Выберите из списка...</option>
+                    <option valCost="1300" valK2="5">Адаптивен под абсолютно любые устройства</option>
+                    <option valCost="600" valK2="4">Будет шикарно выглядеть на любом компьютере</option>
+                    <option valCost="100" valK2="1">Ориентир на строго конкретные параметры</option>
+                </select>
+
+                <div class="calculation">
+                    <div class="row">
+                        <div class="col-6"><p>Сроки</p></div>
+                        <div class="col-6" id="dateItog">0</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-6"><p>Стоимость</p></div>
+                        <div class="col-6" id="sumItog">0</div>
+                    </div>
+                </div>
+                
+                <!--<input type="button" value="Оставить заявку">-->
+            </div> 
+        </div>
+       
+
+    <!--SOME STATISTICS-->
+        <div class="parallax" id="stats">
+
+            <div class="container py-5 d-flex flex-column align-items-center">
+                <h2>НЕМНОГО СТАТИСТИКИ</h2>
+                <div class="line"></div>
+
+                <div class="row w-100 py-5 my-5 justify-content-around text-center">
+                    <div id="smile" class="col-12 col-lg-3 py-4 py-lg-0">
+                        <h3 class="element-animation" znach="120"></h3>
+                        <p>СЧАСТЛИВЫХ КЛИЕНТОВ</p>
+                    </div>
+
+                    <div id="orange_znak" class="col-12 col-lg-3 py-4 py-lg-0">
+                        <h3 class="element-animation" znach="4600"></h3>
+                        <p>ЧАСОВ РАБОТЫ</p>
+                    </div>
+
+                    <div id="galochka" class="col-12 col-lg-3 py-4 py-lg-0">
+                        <h3 class="element-animation" znach="340"></h3>
+                        <p>ПРОЕКТОВ ЗАВЕРШЕНО</p>
+                    </div>
+
+                    <div id="kubok" class="col-12 col-lg-3 pt-4 py-lg-0">
+                        <h3 class="element-animation" znach="23"></h3>
+                        <p>НАГРАД ПОЛУЧЕНО</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    <!--REVIEWS-->
+        <div class="reviews" id="reviews">
+            <div class="container py-5 mt-5 d-flex flex-column align-items-center text-center">
+                <h2>ОТЗЫВЫ</h2>
+                <div class="line"></div>
+            
+        
+
+
+            <div id="carouselExampleIndicatorsReviews" class="carousel slide text-center" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicatorsReviews" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicatorsReviews" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicatorsReviews" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicatorsReviews" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicatorsReviews" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicatorsReviews" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              </div>
+
+
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <img src="img/Sanya.jpg" class="d-block my-4" alt="...">
+                  <div class="row justify-content-center" ><div class="col-7">
+                    <p>Скажу вам так, сколько наша компания нанимала разработчиков, Владислав - самый профессиональный и пунктуальный. С ним работать одно удовольствие.</p></div>
+                  </div>         
+                  <p class="mb-5 pb-4"><b>Александр, </b>Независимый клиент</p>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <img src="img/Vlada.jpg" class="d-block my-4 " alt="...">
+                  <div class="row justify-content-center"><div class="col-7">
+                    <p>Спасибо огромное за работу. С Вами я уверенa, что за мной не следит "Большой брат".</p></div>
+                  </div>
+                  <p class="mb-5 pb-4"><b>Anonim, </b>Представитель компании ООО "Моя Высота"</p>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <img src="img/Vika.jpg" class="d-block my-4" alt="...">
+                  <div class="row justify-content-center"><div class="col-7">
+                    <p>Владислав, моя вам благодарность! Надеюсь на дальнейшее взаимовыгодное сотрудничество</p></div> 
+                  </div>
+                  <p class="mb-5 pb-4"><b>Олейникова Виктория Валерьевна, </b>Генеральный директор английского банка «Barclays (BARC)»</p>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <img src="img/Dimasik.jpg" class="d-block my-4" alt="...">
+                  <div class="row justify-content-center"><div class="col-7">
+                    <p>Мы с Владиславом хоть и знакомы давно, но могу заверить, что более увлеченного в разработке вашего сайта разработчика вам не найти.</p></div>
+                  </div>
+                  <p class="mb-5 pb-4"><b>Дмитрий, </b>Покоритель вселенной и СyberPunk'а</p>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <img src="img/hackermen.png" class="d-block my-4" alt="...">
+                  <div class="row justify-content-center"><div class="col-7">
+                    <p>Большое-пребольшое вам спасибо. Всегда хотелось взяться за что-то новое, но с вами мое знакомство с веб-разработкой прошло без проблем и нервов.</p></div>
+                  </div>
+                  <p class="mb-5 pb-4"><b>Уваров Владислав Сергеевич, </b>Фул стек веб-разработчик</p>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="10000">
+                  <img src="img/Anya.jpg" class="d-block my-4" alt="...">
+                  <div class="row justify-content-center"><div class="col-7">
+                    <p>Для меня было максимально важно сделать в короткий срок. Владислав очень ответсвенно подошел к проекту, за что отдельная большая благодарность. Все получилось оперативно и с учетом всех моих пожеланий. Теперь всем знакомым буду рекомендовать только его.</p></div>
+                  </div>
+                  <p class="mb-5 pb-4"><b>Анечка, </b>Главный помошник</p>
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsReviews" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true">Назад</span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsReviews" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"> Вперед</span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            </div>
+        </div>
+
+
+    <!--CONTACTS-->
+        <div class="contacts" id="contacts">
+            <div class="container py-5 d-flex flex-column align-items-center">
+                <h2>МОИ КОНТАКТЫ</h2>
+                <div class="line"></div>
+
+                <div class="row py-4 w-100 justify-content-around text-center">
+                    <div class="col-2"></div>
+                    <div id="Geo" class="col-12 col-lg-2 py-4 py-lg-0">
+                        <p>Санкт-Петербург<br> Невский проспект 11</p>
+                    </div>
+
+                    <div id="konvert" class="col-12 col-lg-3 py-4 py-lg-0">
+                        <a id="companyname" href="mailto:yvarov.vs@mail.ru">yvarov.vs@mail.ru</a>
+                    </div>
+
+                    <div id="Tel" class="col-12 col-lg-2 py-4 py-lg-0">
+                        <a href="tel:+79511412742">+7(951)141-2742</a>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+
+                <h4>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h4>
+
+                <form enctype="multipart/form-data" method="post" onsubmit="send(event, 'send.php')">
+                    <div class="row mb-3">
+                        <div class="col-12 col-lg-4 mb-3"><input class="modal_input  always" type="text" required name="user_name" placeholder="Имя"></div>
+                        <div class="col-12 col-lg-4 mb-3"><input class="modal_input  always" type="email" required name="user_email" placeholder="Email"></div>
+                        <div class="col-12 col-lg-4 mb-3"><input class="modal_input  always" type="tel" required name="user_tel" placeholder="+7(999)999-9999"></div>                        
+                    </div>
+                    <textarea class=" col-12 modal_input" name="user_massage" id="massage" placeholder="Сообщение"></textarea>                    
+                    <input type="submit" id="Send" value="Отправить">
+                </form>
+                <div class="recomend"><p>Порекомендуйте меня вашим знакомым :)</p></div>
+                <div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="vkontakte,telegram,whatsapp"></div>
+                <!--Ничего из этого у меня пока что нет
+                <div class="icons">
+                    <div class="row w-100 justify-content-between text-center">
+                        <div id="facebook" class="col-1 icon-facebook"></div>
+                        <div id="twitter" class="col-1 icon-twitter"></div>
+                        <div id="ball" class="col-1 icon-ball"></div>
+                        <div id="kisa" class="col-1 icon-kisa"></div>
+                        <div id="insta" class="col-1 icon-insta"></div>
+                        <div id="in" class="col-1 icon-in"></div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <h6>Copyright © 2021 Влад Уваров.</h6>
+    </footer>
+    
+    <script src="js/jquery-3.6.0.min.js" ></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    
+    <script src="js/calculation.js"></script>
+    <script src="js/testJS.js"></script>
+    <script src="js/myScript.js"></script>
+
+    <script src="https://yastatic.net/share2/share.js"></script>
+
+    <script src="js/top0.js"></script>
+</body>
+</html>
